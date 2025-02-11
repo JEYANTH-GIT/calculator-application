@@ -1,13 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.2"
+    namespace "com.example.calculator"  // 🔥 Add this line
+
+    compileSdk 34  // Updated to latest stable version
 
     defaultConfig {
         applicationId "com.example.calculator"
-        minSdkVersion 22
-        targetSdkVersion 30
+        minSdk 22
+        targetSdk 34  // Updated to latest stable version
         versionCode 1
         versionName "1.0"
 
@@ -24,12 +25,13 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
-    implementation 'androidx.gridlayout:gridlayout:1.0.0'
-    implementation 'com.google.android.material:material:1.0.0'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
+    implementation 'androidx.appcompat:appcompat:1.6.1'  // Updated
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'  // Updated
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
+    implementation 'com.google.android.material:material:1.9.0'  // Updated
+
+    testImplementation 'junit:junit:4.13.2'  // Updated
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'  // Updated
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'  // Updated
 }
